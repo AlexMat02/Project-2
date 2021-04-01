@@ -1,0 +1,146 @@
+body {
+  font-family: Raleway;
+}
+
+#Nav1{
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#Nav1_1{
+  padding: 20px;
+  color: black;
+}
+
+#Nav1_1:hover{
+  border: 5px solid rgb(20, 100, 220);
+  color: rgb(20, 100, 220);
+  border-bottom: white;
+  border-right: white;
+  border-left: white;
+}
+
+#Nav1_2{
+  padding: 20px;
+  color: black;
+}
+
+#Nav1_2:hover{
+  border: 5px solid rgb(20, 100, 220);
+  color: rgb(20, 100, 220);
+  border-bottom: white;
+  border-right: white;
+  border-left: white;
+}
+
+#Nav1_3{
+  padding: 20px;
+  color: black;
+}
+
+#Nav1_3:hover{
+  border: 5px solid rgb(20, 100, 220);
+  color: rgb(20, 100, 220);
+  border-bottom: white;
+  border-right: white;
+  border-left: white;
+}
+
+#img1{
+  float: left;
+}
+
+#p1{
+  font-weight: bold;
+  font-size: large;
+}
+
+#p3{
+  font-weight: bold;
+  font-size: large;
+}
+
+#search_div{
+  display: flex;
+  align-items: baseline;
+}
+
+#search_icon{
+  background-color: lightgrey;
+  padding: 7px 15px 9px 15px;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#search_bar{
+  padding: 5px 5px 5px 5px;
+}
+
+#search_button{
+  color: white;
+  background-color: #0065FC;
+  border: #0065FC;
+  border-radius: 8px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  cursor: pointer;
+  padding: 8px 15px;
+}
+
+.logo_list{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 40%;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.logos{
+  background-color: lightblue;
+  border-radius: 25px;
+  padding: 10px 10px 10px 10px;
+}
+
+.logos_text{
+  font-weight: bold;
+  border: thin solid lightgray;
+  border-left-color: white;
+  border-radius: 17px;
+  padding: 5px 5px 5px 25px;
+}
+
+#Logo_info_with_text{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 10px 10px 10px 10px;
+}
+
+#Logo_info_with_text_text{
+  padding: 10px 10px 10px 10px;
+}
+
+.Logo_info_with_text_logo{
+  border: thin solid grey;
+  padding: 5px 10px 5px 10px;
+  border-radius: 17px;
+}
+
+footer{
+  background-color: lightgrey;
+  background-position: center center;
+  border: 60px solid white;
+  border-right-width: 1fr;
+  border-left-width: 1fr;
+  justify-content: center;
+  display: grid;
+  grid-template: repeat(4, 15%)/ repeat(3, 30%);
+}
+
+.Footer_Title{
+  font-weight: bold ;
+}
