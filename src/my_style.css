@@ -2,45 +2,20 @@ body {
   font-family: Raleway;
 }
 
-#Nav1{
+#nav1{
   color: black;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-#Nav1_1{
+.nav-text{
   padding: 20px;
   color: black;
+  text-decoration: none;
 }
 
-#Nav1_1:hover{
-  border: 5px solid rgb(20, 100, 220);
-  color: rgb(20, 100, 220);
-  border-bottom: white;
-  border-right: white;
-  border-left: white;
-}
-
-#Nav1_2{
-  padding: 20px;
-  color: black;
-}
-
-#Nav1_2:hover{
-  border: 5px solid rgb(20, 100, 220);
-  color: rgb(20, 100, 220);
-  border-bottom: white;
-  border-right: white;
-  border-left: white;
-}
-
-#Nav1_3{
-  padding: 20px;
-  color: black;
-}
-
-#Nav1_3:hover{
+.nav-text:hover{
   border: 5px solid rgb(20, 100, 220);
   color: rgb(20, 100, 220);
   border-bottom: white;
@@ -62,12 +37,12 @@ body {
   font-size: large;
 }
 
-#search_div{
+#search-div{
   display: flex;
   align-items: baseline;
 }
 
-#search_icon{
+#search-icon{
   background-color: lightgrey;
   padding: 7px 15px 9px 15px;
   border-radius: 5px;
@@ -75,11 +50,11 @@ body {
   border-bottom-right-radius: 0px;
 }
 
-#search_bar{
+#search-bar{
   padding: 5px 5px 5px 5px;
 }
 
-#search_button{
+#search-button{
   color: white;
   background-color: #0065FC;
   border: #0065FC;
@@ -90,7 +65,7 @@ body {
   padding: 8px 15px;
 }
 
-.logo_list{
+.logo-list{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -99,13 +74,14 @@ body {
   justify-content: space-between;
 }
 
-.logos{
-  background-color: lightblue;
+.logo{
+  color: #0065FC;
+  background-color: #DEEBFF;
   border-radius: 25px;
   padding: 10px 10px 10px 10px;
 }
 
-.logos_text{
+.logo-text{
   font-weight: bold;
   border: thin solid lightgray;
   border-left-color: white;
@@ -113,25 +89,26 @@ body {
   padding: 5px 5px 5px 25px;
 }
 
-#Logo_info_with_text{
+#logo-info-with-text{
   display: flex;
   flex-direction: row;
   align-items: baseline;
   padding: 10px 10px 10px 10px;
 }
 
-#Logo_info_with_text_text{
+#logo-info-with-text-text{
   padding: 10px 10px 10px 10px;
 }
 
-.Logo_info_with_text_logo{
+.logo-info-with-text-logo{
+  color: #0065FC;
   border: thin solid grey;
   padding: 5px 10px 5px 10px;
   border-radius: 17px;
 }
 
 footer{
-  background-color: lightgrey;
+  background-color: #F2F2;
   background-position: center center;
   border: 60px solid white;
   border-right-width: 1fr;
@@ -141,6 +118,6 @@ footer{
   grid-template: repeat(4, 15%)/ repeat(3, 30%);
 }
 
-.Footer_Title{
+.footer-Title{
   font-weight: bold ;
 }
