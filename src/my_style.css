@@ -29,7 +29,6 @@ body {
 
 #p1{
   font-weight: bold;
-  font-size: large;
 }
 
 #p3{
@@ -71,7 +70,6 @@ body {
   flex-direction: row;
   width: 40%;
   align-items: baseline;
-  justify-content: space-between;
 }
 
 .logo{
@@ -79,6 +77,7 @@ body {
   background-color: #DEEBFF;
   border-radius: 25px;
   padding: 10px 10px 10px 10px;
+  margin-left: 15px;
 }
 
 .logo-text{
@@ -86,7 +85,7 @@ body {
   border: thin solid lightgray;
   border-left-color: white;
   border-radius: 17px;
-  padding: 5px 5px 5px 25px;
+  padding: 7px 5px 7px 25px;
 }
 
 #logo-info-with-text{
@@ -108,14 +107,108 @@ body {
 }
 
 footer{
+  justify-content: baseline;
+}
+
+#accommodations-in-marseille-h3{
+  margin: 20px;
+}
+
+#accommodations-in-marseille-container{
+  float: left;
+  width: 60%;
+  height: 525px;
+  border: 5px solid white;
+  border-radius: 10px;
+  background-color: #F2F2;
+}
+
+#accommodations-in-marseille{
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(2, 50%);
+  grid-column-gap: 25px;
+  align-content: center;
+}
+
+.accommodations-in-marseille-image{
+  margin-bottom: 25px;
+  border: 1px solid #F2F2;
+  border-radius: 10px;
+  width: 250px;
+  height: 125px;
+  background-color: white;
+  padding: 5px 5px 50px 5px;
+}
+
+#accommodations-in-marseille-show-more{
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+#most-popular-container{
+  float: right;
+  width: 25%;
+  height: 525px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #F2F2;
+  padding: 20px 20px 20px 20px;
+}
+
+#most-popular-image-container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.most-popular-image{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #F2F2;
+  border-radius: 10px;
+  width: 175px;
+  height: 100px;
+  background-color: white;
+  padding: 5px 125px 5px 5px;
+}
+
+aside{
+  clear: both;
+}
+
+.activities-in-marseille-header{
+  float: left;
+}
+
+#activities-in-marseille-image-container{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+}
+
+.activities-in-marseille-image{
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #F2F2;
+  border-radius: 10px;
+  padding: 0px 0px 25px 0px;
+}
+
+footer{
+  clear: both;
   background-color: #F2F2;
   background-position: center center;
-  border: 60px solid white;
-  border-right-width: 1fr;
-  border-left-width: 1fr;
+  border: 1px solid white;
+  border-width: 100%;
   justify-content: center;
   display: grid;
   grid-template: repeat(4, 15%)/ repeat(3, 30%);
+  padding: 25px 0px 0px 0px;
 }
 
 .footer-Title{
