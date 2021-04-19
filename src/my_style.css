@@ -2,6 +2,10 @@ body {
   font-family: Raleway;
 }
 
+span{
+  font-weight: bold;
+}
+
 #nav1{
   color: black;
   display: flex;
@@ -66,10 +70,14 @@ body {
 
 .logo-list{
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
   width: 40%;
   align-items: baseline;
+}
+
+.logo-card{
+  justify-content: baseline;
 }
 
 .logo{
@@ -77,15 +85,19 @@ body {
   background-color: #DEEBFF;
   border-radius: 25px;
   padding: 10px 10px 10px 10px;
-  margin-left: 15px;
+  margin-left: 12px;
 }
 
 .logo-text{
   font-weight: bold;
   border: thin solid lightgray;
-  border-left-color: white;
+  border-left-style: hidden;
   border-radius: 17px;
-  padding: 7px 5px 7px 25px;
+  padding: 7px 7px 7px 27px;
+  position: relative;
+  bottom: 50px;
+  left: 30px;
+  margin-right: 20px;
 }
 
 #logo-info-with-text{
@@ -106,8 +118,13 @@ body {
   border-radius: 17px;
 }
 
-footer{
-  justify-content: baseline;
+.p-card{
+  margin-top: -15px;
+  margin-bottom: auto;
+}
+
+.logo-star{
+  color: #0065FC;
 }
 
 #accommodations-in-marseille-h3{
@@ -115,12 +132,21 @@ footer{
 }
 
 #accommodations-in-marseille-container{
-  float: left;
-  width: 60%;
-  height: 525px;
+  width: fit-content;
+  padding: 20px;
   border: 5px solid white;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #F2F2;
+}
+
+.accommodations-in-marseille-card-container{
+  margin: 5px;
+  border: 5px solid white;
+  background-color: white;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 3px;
+  box-shadow: 0px 3px 20px lightgrey;
 }
 
 #accommodations-in-marseille{
@@ -133,13 +159,9 @@ footer{
 }
 
 .accommodations-in-marseille-image{
-  margin-bottom: 25px;
-  border: 1px solid #F2F2;
-  border-radius: 10px;
   width: 250px;
   height: 125px;
-  background-color: white;
-  padding: 5px 5px 50px 5px;
+  object-fit: cover;
 }
 
 #accommodations-in-marseille-show-more{
@@ -149,31 +171,59 @@ footer{
   font-weight: bold;
 }
 
-#most-popular-container{
+#chart{
   float: right;
-  width: 25%;
-  height: 525px;
+}
+
+.most-popular-title{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#most-popular-container{
+  padding: 20px;
+  width: fit-content;
   border: 1px solid white;
   border-radius: 10px;
   background-color: #F2F2;
-  padding: 20px 20px 20px 20px;
 }
 
 #most-popular-image-container{
   display: flex;
   flex-direction: column;
+}
 
+.most-popular-image-card-container{
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  border: 5px solid white;
+  background-color: white;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 3px;
+  box-shadow: 0px 3px 20px lightgrey;
 }
 
 .most-popular-image{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #F2F2;
-  border-radius: 10px;
   width: 175px;
-  height: 100px;
-  background-color: white;
-  padding: 5px 125px 5px 5px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.most-popular-next-to-image{
+ margin-left: 10px;
+}
+
+.most-popular-card{
+  margin-top: 30px;
+}
+
+.logo-star-most-popular{
+  margin-top: 10px;
 }
 
 aside{
@@ -185,26 +235,64 @@ aside{
 }
 
 #activities-in-marseille-image-container{
-  width: 90%;
+  clear: both;
+  justify-items: baseline;
+  column-count: 4;
+  column-width: 25%;
+  column-gap: 2%;
+}
+
+.activities-in-marseille-image{
+  width: 100%;
+  height: 22%;
+  object-fit: cover;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.activities-in-marseille-image-long{
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.activities-in-marseille-image-card-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid #F2F2;
+  border-radius: 20px;
+  box-shadow: 0px 3px 20px lightgrey;
+}
+
+.activities-in-marseille-image-card-header{
+  padding-left: 7px;
+}
+
+.activities-in-marseille-image-card-container-column-1{
   display: flex;
   flex-direction: row;
 }
 
-.activities-in-marseille-image{
-  margin: 20px;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #F2F2;
-  border-radius: 10px;
-  padding: 0px 0px 25px 0px;
+.activities-in-marseille-image-card-container-column-2{
+  display: flex;
+  flex-direction: row;
+}
+
+.section-group1{
+  display: flex;
+  flex-direction: column;
 }
 
 footer{
   clear: both;
   background-color: #F2F2;
   background-position: center center;
-  border: 1px solid white;
-  border-width: 100%;
   justify-content: center;
   display: grid;
   grid-template: repeat(4, 15%)/ repeat(3, 30%);
