@@ -2,7 +2,7 @@ body {
   font-family: Raleway;
 }
 
-span{
+.bold-span{
   font-weight: bold;
 }
 
@@ -33,6 +33,7 @@ span{
 
 #p1{
   font-weight: bold;
+  margin-bottom: -10px;
 }
 
 #p3{
@@ -71,13 +72,8 @@ span{
 .logo-list{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 40%;
+  flex-wrap: nowrap;
   align-items: baseline;
-}
-
-.logo-card{
-  justify-content: baseline;
 }
 
 .logo{
@@ -86,18 +82,19 @@ span{
   border-radius: 25px;
   padding: 10px 10px 10px 10px;
   margin-left: 12px;
+  margin-right: -50px;
+  z-index: 2;
 }
 
 .logo-text{
   font-weight: bold;
   border: thin solid lightgray;
-  border-left-style: hidden;
+  border-left-width: 0px;
   border-radius: 17px;
-  padding: 7px 7px 7px 27px;
-  position: relative;
-  bottom: 50px;
-  left: 30px;
+  padding: 8px 8px 8px 27px;
+  z-index: 1;
   margin-right: 20px;
+  margin-left: 25px;
 }
 
 #logo-info-with-text{
@@ -118,11 +115,6 @@ span{
   border-radius: 17px;
 }
 
-.p-card{
-  margin-top: -15px;
-  margin-bottom: auto;
-}
-
 .logo-star{
   color: #0065FC;
 }
@@ -133,7 +125,8 @@ span{
 
 #accommodations-in-marseille-container{
   width: fit-content;
-  padding: 20px;
+  padding: 20px 20px 40px 20px;
+  margin-right: 20px;
   border: 5px solid white;
   border-radius: 20px;
   background-color: #F2F2;
@@ -143,8 +136,7 @@ span{
   margin: 5px;
   border: 5px solid white;
   background-color: white;
-  border-radius: 10px;
-  width: fit-content;
+  border-radius: 20px;
   padding: 3px;
   box-shadow: 0px 3px 20px lightgrey;
 }
@@ -152,16 +144,32 @@ span{
 #accommodations-in-marseille{
   margin: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 33%);
-  grid-template-rows: repeat(2, 50%);
-  grid-column-gap: 25px;
+  grid-template-columns: repeat(3, 31%);
+  grid-template-rows: repeat(2, 48%);
+  grid-column-gap: 35px;
+  grid-row-gap: 15px;
   align-content: center;
+  justify-content: baseline;
+}
+
+#p-city-logo-text{
+  display: block;
 }
 
 .accommodations-in-marseille-image{
-  width: 250px;
-  height: 125px;
+  width: 100%;
+  height: 160px;
   object-fit: cover;
+  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.accommodations-in-marseille-text-card{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
 }
 
 #accommodations-in-marseille-show-more{
@@ -169,61 +177,75 @@ span{
   text-decoration: none;
   margin-left: 20px;
   font-weight: bold;
+  font-size: large;
 }
 
-#chart{
-  float: right;
+.p-card{
+  margin-top: -15px;
+  margin-bottom: 5px;
 }
 
 .most-popular-title{
-  display: flex;
-  flex-direction: column-reverse;
+  display: inline;
+  justify-content: space-around;
+}
+
+#chart{
+  float:right;
 }
 
 #most-popular-container{
+  margin-left: 20px;
   padding: 20px;
   width: fit-content;
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #F2F2;
 }
 
 #most-popular-image-container{
   display: flex;
   flex-direction: column;
+  align-content: space-between;
 }
 
 .most-popular-image-card-container{
   display: flex;
   flex-direction: row;
   margin: 5px;
+  margin-top: 20px;
   border: 5px solid white;
   background-color: white;
-  border-radius: 10px;
-  width: fit-content;
+  border-radius: 20px;
+  width: 100%;
+  height: 33%;
   padding: 3px;
   box-shadow: 0px 3px 20px lightgrey;
 }
 
 .most-popular-image{
   width: 175px;
-  height: 130px;
+  height: 170px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 15px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
 
 .most-popular-next-to-image{
- margin-left: 10px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
 }
 
 .most-popular-card{
-  margin-top: 30px;
+  margin-top: 25px;
+  margin-bottom: 40px;
 }
 
-.logo-star-most-popular{
-  margin-top: 10px;
+#span-space{
+  color: white;
 }
 
 aside{
@@ -253,7 +275,7 @@ aside{
 
 .activities-in-marseille-image-long{
   width: 100%;
-  height: 55%;
+  height: 500px;
   object-fit: cover;
   border-radius: 20px;
   border-bottom-left-radius: 0px;
@@ -261,13 +283,11 @@ aside{
 }
 
 .activities-in-marseille-image-card-container{
-  margin-top: 20px;
-  margin-bottom: 20px;
   width: fit-content;
   height: fit-content;
   border: 1px solid #F2F2;
   border-radius: 20px;
-  box-shadow: 0px 3px 20px lightgrey;
+  box-shadow: 0px 2px 10px lightgrey;
 }
 
 .activities-in-marseille-image-card-header{
@@ -275,30 +295,83 @@ aside{
 }
 
 .activities-in-marseille-image-card-container-column-1{
-  display: flex;
-  flex-direction: row;
+  margin-top: 20px;
 }
 
 .activities-in-marseille-image-card-container-column-2{
-  display: flex;
-  flex-direction: row;
+  margin-top: 20px;
 }
 
-.section-group1{
+#section-1{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-content: flex-start;
+}
+
+section:nth-of-type(1) {
+  flex-basis: 75%;
+}
+
+section:nth-of-type(2) {
+  flex-basis: 25%;
 }
 
 footer{
   clear: both;
   background-color: #F2F2;
   background-position: center center;
-  justify-content: center;
+  background-size: cover;
+}
+
+#footer-text{
+  justify-content: baseline;
   display: grid;
   grid-template: repeat(4, 15%)/ repeat(3, 30%);
   padding: 25px 0px 0px 0px;
+  margin-top: 30px;
 }
 
 .footer-Title{
   font-weight: bold ;
+}
+
+@media screen and (max-width: 768px){
+  #section-1{
+    display: unset;
+  }
+  #accommodations-in-marseille{
+    display: flex;
+    flex-direction: column;
+  }
+  #accommodations-in-marseille-container{
+    background-color: white;
+  }
+  #activities-in-marseille-image-container{
+    display: flex;
+    flex-direction: column;
+  }
+  #activities-in-marseille-image-container{
+    column-count: 1;
+  }
+  .p1-vacation{
+    display: block;
+  }
+  #p-city-logo-text{
+    display:inline;
+  }
+  .nav-text{
+    display: none;
+    float: none;
+  }
+  #sign-up-text-nav{
+    float: right;
+  }
+  .nav-class{
+    display: flex;
+    flex-direction: column;
+  }
+  #nav1{
+    display: flex;
+    flex-direction: row;
+  }
 }
