@@ -1,5 +1,6 @@
 body {
   font-family: Raleway;
+  margin: auto;
 }
 
 .bold-span{
@@ -28,12 +29,21 @@ body {
 }
 
 #img1{
+  margin-left: 15px;
+  margin-right: 15px;
   float: left;
 }
 
 #p1{
+  margin-left: 15px;
+  margin-right: 15px;
   font-weight: bold;
   margin-bottom: -10px;
+}
+
+#p2{
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 #p3{
@@ -42,6 +52,8 @@ body {
 }
 
 #search-div{
+  margin-left: 15px;
+  margin-right: 15px;
   display: flex;
   align-items: baseline;
 }
@@ -70,6 +82,8 @@ body {
 }
 
 .logo-list{
+  margin-left: 15px;
+  margin-right: 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -250,6 +264,8 @@ body {
 }
 
 aside{
+  margin-left: 15px;
+  margin-right: 15px;
   clear: both;
 }
 
@@ -307,6 +323,8 @@ aside{
   display: flex;
   flex-direction: row;
   align-content: flex-start;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 section:nth-of-type(1) {
@@ -315,6 +333,11 @@ section:nth-of-type(1) {
 
 section:nth-of-type(2) {
   flex-basis: 25%;
+}
+
+footer{
+  margin: auto;
+  width: 100%;
 }
 
 #footer-text{
@@ -333,7 +356,19 @@ section:nth-of-type(2) {
     font-size: larger;
   }
   #nav1{
-    float: unset;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: unset;
+    width: 100%;
+  }
+  .nav-text{
+    display: none;
+    float: none;
+  }
+  #sign-up-text-nav{
+    float: right;
+  }
+  .nav-class{
     display: flex;
     flex-direction: column;
   }
@@ -364,6 +399,7 @@ section:nth-of-type(2) {
   }
   .activities-in-marseille-image{
     height: 200px;
+    width: 100%;
   }
   .activities-in-marseille-image-long{
     height: 200px;
@@ -377,15 +413,39 @@ section:nth-of-type(2) {
   #p-city-logo-text{
     display:inline;
   }
-  .nav-text{
-    display: none;
-    float: none;
+  #footer-text{
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas: "about" "site" "general" "data" "accommodations" "quality" "you" "assistance" "help1" "contact"; 
   }
-  #sign-up-text-nav{
-    float: right;
+  #footer-about{
+    grid-area: about;
   }
-  .nav-class{
-    display: flex;
-    flex-direction: column;
+  #footer-site{
+    grid-area: site;
+  }
+  #footer-general{
+    grid-area: general;
+  }
+  #footer-data{
+    grid-area: data;
+  }
+  #footer-accommoddations{
+    grid-area: accommodations;
+  }
+  #footer-quality{
+    grid-area: quality;
+  }
+  #footer-you{
+    grid-area: you;
+  }
+  #footer-assistance{
+    grid-area: assistance;
+  }
+  #footer-help{
+    grid-area: help1;
+  }
+  #footer-contact{
+    grid-area: contact;
   }
 }
