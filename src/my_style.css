@@ -86,7 +86,22 @@ body {
   margin-right: 15px;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+}
+
+#logo-true-list{
+  display: block;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(1,1fr);
+}
+
+.filter-hover:hover{
+  color: #0065FC;
+  border-color: #0065FC;
+}
+
+.filter-hover{
+  display: flex;
   align-items: baseline;
 }
 
@@ -276,9 +291,15 @@ aside{
 #activities-in-marseille-image-container{
   clear: both;
   justify-items: baseline;
-  column-count: 4;
-  column-width: 25%;
-  column-gap: 2%;
+}
+
+.activities-in-marseille-image-card-container-main{
+  float: left;
+  width: 22%;
+}
+
+.activities-in-marseille-image-card-container-2{
+  columns: 1;
 }
 
 .activities-in-marseille-image{
@@ -299,26 +320,6 @@ aside{
   border-bottom-right-radius: 0px;
 }
 
-.activities-in-marseille-image-card-container{
-  width: fit-content;
-  height: fit-content;
-  border: 1px solid #F2F2;
-  border-radius: 20px;
-  box-shadow: 0px 2px 10px lightgrey;
-}
-
-.activities-in-marseille-image-card-header{
-  padding-left: 7px;
-}
-
-.activities-in-marseille-image-card-container-column-1{
-  margin-top: 20px;
-}
-
-.activities-in-marseille-image-card-container-column-2{
-  margin-top: 20px;
-}
-
 #section-1{
   display: flex;
   flex-direction: row;
@@ -336,6 +337,7 @@ section:nth-of-type(2) {
 }
 
 footer{
+  clear: both;
   margin: auto;
   width: 100%;
 }
@@ -347,12 +349,15 @@ footer{
   justify-content: baseline;
   display: grid;
   grid-template: repeat(4, 15%)/ repeat(3, 30%);
-  padding: 25px 0px 0px 0px;
+  padding: 25px 15px 0px 15px;
   margin-top: 30px;
 }
 
 @media screen and (max-width: 768px){
   body{
+    font-size: larger;
+  }
+  #p1{
     font-size: larger;
   }
   #nav1{
@@ -365,6 +370,18 @@ footer{
     display: none;
     float: none;
   }
+  .nav-class{
+    border: 1px #F2F2 solid;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+  }
+  .nav-class:hover{
+    border: 1px #0065FC solid;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+  }
   #sign-up-text-nav{
     float: right;
   }
@@ -372,8 +389,21 @@ footer{
     display: flex;
     flex-direction: column;
   }
+  #p3{
+    margin-left: 15px;
+  }
+  .logo-list{
+    display: unset;
+  }
+  #logo-true-list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+  }
   #section-1{
     display: grid;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   #accommodations-in-marseille{
     display: flex;
@@ -386,6 +416,8 @@ footer{
     width: auto;
     grid-row: 1;
     border-radius: 0px;
+    margin-left: 0px;
+    border: 0px;
   }
   #activities-in-marseille-image-container{
     display: flex;
@@ -397,15 +429,8 @@ footer{
   #accommodations-in-marseille-show-more{
     font-size: x-large;
   }
-  .activities-in-marseille-image{
-    height: 200px;
+  .activities-in-marseille-image-card-container-main{
     width: 100%;
-  }
-  .activities-in-marseille-image-long{
-    height: 200px;
-  }
-  #calanques{
-    margin-top: 20px;
   }
   .p1-vacation{
     display: block;
