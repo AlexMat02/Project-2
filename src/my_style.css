@@ -14,10 +14,19 @@ body {
   justify-content: flex-end;
 }
 
+#nav1, #nav-text-sign-up{
+  float: right;
+}
+
+#nav-text-sign-up{
+  color: #0065FC;
+}
+
 .nav-text{
   padding: 20px;
   color: black;
   text-decoration: none;
+  border: 1px solid white;
 }
 
 .nav-text:hover{
@@ -39,6 +48,7 @@ body {
   margin-right: 15px;
   font-weight: bold;
   margin-bottom: -10px;
+  clear: both;
 }
 
 #p2{
@@ -52,8 +62,7 @@ body {
 }
 
 #search-div{
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 15px;
   display: flex;
   align-items: stretch;
 }
@@ -92,10 +101,9 @@ body {
 }
 
 #logo-true-list{
-  display: block;
-  display: grid;
-  grid-template-columns: 20% 25% 20% 25%;
-  grid-template-rows: repeat(1,1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #search-logo-button{
@@ -104,6 +112,9 @@ body {
 
 .filter-hover:hover{
   color: #0065FC;
+  border: 1px dashed #0065FC;
+  border-radius: 100px;
+  background-color: ghostwhite;
 }
 
 .filter-hover{
@@ -180,7 +191,7 @@ body {
 #accommodations-in-marseille{
   margin: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 35px;
   grid-row-gap: 15px;
   align-content: center;
@@ -271,12 +282,8 @@ body {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  align-content: space-between;
-}
-
-.most-popular-card{
-  margin-top: 25px;
-  margin-bottom: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 #span-space{
@@ -350,6 +357,7 @@ aside{
   display: flex;
   flex-direction: row;
   align-content: flex-start;
+  align-items: flex-start;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -379,6 +387,12 @@ footer{
   margin-top: 30px;
 }
 
+@media screen and (max-width : 1980px){
+  #accommodations-in-marseille{
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
 @media screen and (max-width: 1500px){
   .most-popular-image-card-container{
     flex-direction: column;
@@ -402,13 +416,11 @@ footer{
     display: unset;
   }
   #nav1{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: unset;
     width: 100%;
+    margin-bottom: 10px;
   }
   .nav-text{
-    display: none;
     float: none;
   }
   .nav-class{
@@ -416,6 +428,9 @@ footer{
     border-top-color: white;
     border-left-color: white;
     border-right-color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   .nav-class:hover{
     border: 1px #0065FC solid;
@@ -423,9 +438,8 @@ footer{
     border-left-color: white;
     border-right-color: white;
   }
-  .nav-class{
-    display: flex;
-    flex-direction: column;
+  #nav-text-sign-up{
+    float: right;
   }
   #search-logo-button{
     display: initial;
@@ -448,10 +462,6 @@ footer{
   .logo-list{
     display: unset;
   }
-  #logo-true-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
   #section-1{
     display: grid;
     margin-left: 0px;
@@ -469,6 +479,7 @@ footer{
     background-color: white;
     padding: 20px 0px 40px 0px;
     border: 0px solid white;
+    margin: 0px;
   }
   #most-popular-container{
     width: auto;
@@ -486,8 +497,8 @@ footer{
     width: 100%;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 15px;
-    height: 100%;
-    max-height: 230px;
+    max-width: 100%;
+    max-height: 100%;
   }
   .most-popular-next-to-image{
     font-size: initial;
@@ -511,9 +522,6 @@ footer{
   }
   .activities-in-marseille-image-long{
     height: 150px;
-  }
-  .p1-vacation{
-    display: block;
   }
   #p-city-logo-text{
     display:inline;
