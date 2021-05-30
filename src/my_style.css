@@ -393,7 +393,7 @@ footer{
   }
 }
 
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1749px){
   .most-popular-image-card-container{
     flex-direction: column;
     min-width: 200px;
