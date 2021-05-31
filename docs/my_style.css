@@ -362,11 +362,11 @@ aside{
   margin-right: 15px;
 }
 
-section:nth-of-type(1) {
+main {
   flex-basis: 75%;
 }
 
-section:nth-of-type(2) {
+aside {
   flex-basis: 25%;
 }
 
